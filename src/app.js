@@ -18,7 +18,6 @@ const bot = linebot({
 });
 
 const app = express();
-app.listen(SERVER_PORT);
 
 const server = app.listen(SERVER_PORT || 8080, () => {
   const port = server.address().port;
