@@ -2,6 +2,7 @@ require('dotenv').config();
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './router/api';
+import linebot from 'linebot';
 
 const {
   SERVER_PORT,
@@ -9,9 +10,6 @@ const {
   LINEBOT_CHANNEL_SECRET,
   LINEBOT_CHANNEL_ACCESS_TOKEN,
 } = process.env;
-
-const linebot = require('linebot');
-const express = require('express');
 
 const bot = linebot({
   channelId: LINEBOT_CHANNEL_ID,
